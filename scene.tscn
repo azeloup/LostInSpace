@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://c8o43dswtf6kv"]
 
-[ext_resource type="Script" uid="uid://cgw3f4dkbhsdf" path="res://scene.gd" id="1_3253y"]
+[ext_resource type="Script" uid="uid://bhptvpeq5scc5" path="res://scene.gd" id="1_3253y"]
 [ext_resource type="Texture2D" uid="uid://by6et85chebvt" path="res://SpacePanoramas/panorama4.jpg" id="4_ni31j"]
 [ext_resource type="PackedScene" uid="uid://co2xbiaeyebhe" path="res://sun.tscn" id="5_m7jmp"]
 [ext_resource type="Texture2D" uid="uid://dlpb5g3g1nae1" path="res://SpacePanoramas/NoiseTextures/noise1.jpg" id="5_y2354"]

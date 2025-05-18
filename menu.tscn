@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dddnrstw6lua3"]
 
-[ext_resource type="Script" uid="uid://b8qb8pwsab1ed" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Script" uid="uid://bm1mo8lejiyca" path="res://menu.gd" id="1_lti8b"]
 
 [sub_resource type="StyleBoxFlat" id="1"]
 bg_color = Color(0.16, 0.678, 1, 0.12549)
@@ -62,12 +62,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -110.0
-offset_top = -127.0
-offset_right = 110.0
-offset_bottom = 127.0
+offset_left = -324.0
+offset_top = -253.0
+offset_right = 3.0
+offset_bottom = -74.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 2
@@ -82,27 +83,51 @@ theme_override_constants/separation = 10
 
 [node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "GUI Theming Overrides"
+text = "Lost In Space"
 horizontal_alignment = 1
-
-[node name="HSeparator" type="HSeparator" parent="Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
 
 [node name="Button" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
-text = "Click Me"
+text = "Start Game"
 
 [node name="Button2" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
-text = "Click Me"
+text = "Exit"
 
-[node name="ResetAllButton" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 48)
+[node name="Panel2" type="PanelContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -324.0
+offset_top = 126.0
+offset_right = 3.0
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel2"]
 layout_mode = 2
-text = "Reset All"
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "You lost!
+Score: 0"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Button2" to="." method="_on_button2_pressed"]
-[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/ResetAllButton" to="." method="_on_reset_all_button_pressed"]

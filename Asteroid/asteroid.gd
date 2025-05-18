@@ -7,7 +7,7 @@ var rng = RandomNumberGenerator.new()
 var rotationX = move_rand()
 var rotationY = move_rand()
 var rotationZ = move_rand()
-var translateZ = rng.randf() / 10
+var translateZ = rng.randf() / 5
 
 
 func _ready() -> void:

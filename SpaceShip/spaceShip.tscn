@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=3 uid="uid://cn0pu5b4655d6"]
+[gd_scene load_steps=14 format=3 uid="uid://cn0pu5b4655d6"]
 
-[ext_resource type="Script" uid="uid://wc46jlohoa2w" path="res://SpaceShip/spaceShip.gd" id="1_sddhk"]
-[ext_resource type="ArrayMesh" uid="uid://dq6kiucfg7crg" path="res://SpaceShip/starShip.obj" id="2_5hdnx"]
-[ext_resource type="Texture2D" uid="uid://crngir00ms2bb" path="res://SpaceShip/SpaceShipTexture/Material.001_Base_color.jpg" id="2_sddhk"]
-[ext_resource type="Texture2D" uid="uid://8asklnt6jec" path="res://SpaceShip/SpaceShipTexture/Material.001_Mixed_AO.jpg" id="4_8h2t0"]
-[ext_resource type="Texture2D" uid="uid://dnctvpx5lhwns" path="res://SpaceShip/SpaceShipTexture/Material.001_Normal_DirectX.jpg" id="6_6u7lp"]
-[ext_resource type="Texture2D" uid="uid://ct2ad5dwr0pe3" path="res://SpaceShip/SpaceShipTexture/Material.001_Emissive.jpg" id="7_htqil"]
-[ext_resource type="Texture2D" uid="uid://csf3o8aqmtw3q" path="res://SpaceShip/SpaceShipTexture/Material.001_Metallic.jpg" id="8_wrgg5"]
-[ext_resource type="Texture2D" uid="uid://c8y3bes4e01od" path="res://SpaceShip/SpaceShipTexture/Material.001_Roughness.jpg" id="9_vq0oj"]
+[ext_resource type="Script" uid="uid://dk3a0pnse8rmr" path="res://SpaceShip/spaceShip.gd" id="1_sddhk"]
+[ext_resource type="ArrayMesh" uid="uid://uk3e8sqyp08h" path="res://SpaceShip/starShip.obj" id="2_5hdnx"]
+[ext_resource type="Texture2D" uid="uid://k275lxntpm85" path="res://SpaceShip/SpaceShipTexture/Material.001_Base_color.jpg" id="2_sddhk"]
+[ext_resource type="Texture2D" uid="uid://c8d02hjgxas0y" path="res://SpaceShip/SpaceShipTexture/Material.001_Mixed_AO.jpg" id="4_8h2t0"]
+[ext_resource type="Texture2D" uid="uid://d1rbsc0stis83" path="res://SpaceShip/SpaceShipTexture/Material.001_Normal_DirectX.jpg" id="6_6u7lp"]
+[ext_resource type="Texture2D" uid="uid://dw1mls6wo26je" path="res://SpaceShip/SpaceShipTexture/Material.001_Emissive.jpg" id="7_htqil"]
+[ext_resource type="Texture2D" uid="uid://dop7ahmwk0a3i" path="res://SpaceShip/SpaceShipTexture/Material.001_Metallic.jpg" id="8_wrgg5"]
+[ext_resource type="AudioStream" uid="uid://digvwm3vhltwo" path="res://Among Us Spaceship Crash Sound Effect.mp3" id="9_uwsa0"]
+[ext_resource type="Texture2D" uid="uid://bqojibeioorgd" path="res://SpaceShip/SpaceShipTexture/Material.001_Roughness.jpg" id="9_vq0oj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwsa0"]
 albedo_texture = ExtResource("2_sddhk")
@@ -77,56 +78,57 @@ shape = SubResource("CapsuleShape3D_5hdnx")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
-[node name="Panel" type="PanelContainer" parent="CanvasLayer"]
-offset_right = 72.0
-offset_bottom = 157.0
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+offset_right = 143.0
+offset_bottom = 204.0
 scale = Vector2(2, 2)
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel"]
-layout_mode = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="Label" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "ATH"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label2" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "ATH"
-horizontal_alignment = 1
-
-[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label3" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "ATH"
 horizontal_alignment = 1
 
-[node name="HSeparator3" type="HSeparator" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label4" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+[node name="Label3" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 text = "ATH"
 horizontal_alignment = 1
 
-[node name="Timer" type="Timer" parent="CanvasLayer"]
+[node name="HSeparator3" type="HSeparator" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="CanvasLayer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ATH"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_uwsa0")
+volume_db = 0.5
 
 [connection signal="body_entered" from="BodyArea" to="." method="damage_body"]
 [connection signal="body_entered" from="RightArea" to="." method="damage_right"]
 [connection signal="body_entered" from="LeftArea" to="." method="damage_left"]
-[connection signal="timeout" from="CanvasLayer/Timer" to="." method="update_score"]
+[connection signal="timeout" from="Timer" to="." method="update_score"]
