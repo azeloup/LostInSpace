@@ -4,11 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://0sq3gru4l5se"
-valid=false
+path="res://.godot/imported/Asteroid_1d_LOD.fbx-1adc1d94fbb06c6df072a1719f4df3f7.scn"
 
 [deps]
 
 source_file="res://Asteroid_1d_FBX/Asteroid_1d_LOD.fbx"
+dest_files=["res://.godot/imported/Asteroid_1d_LOD.fbx-1adc1d94fbb06c6df072a1719f4df3f7.scn"]
 
 [params]
 

@@ -4,11 +4,14 @@ importer="wavefront_obj"
 importer_version=1
 type="Mesh"
 uid="uid://3v5j3jn1qyuc"
-valid=false
+path="res://.godot/imported/uploads_files_4254779_StarShip2.obj-0c5c947ad0c0313cba37878b765116ed.mesh"
 
 [deps]
 
+files=["res://.godot/imported/uploads_files_4254779_StarShip2.obj-0c5c947ad0c0313cba37878b765116ed.mesh"]
+
 source_file="res://uploads_files_4254779_StarShip2.obj"
+dest_files=["res://.godot/imported/uploads_files_4254779_StarShip2.obj-0c5c947ad0c0313cba37878b765116ed.mesh", "res://.godot/imported/uploads_files_4254779_StarShip2.obj-0c5c947ad0c0313cba37878b765116ed.mesh"]
 
 [params]
 
