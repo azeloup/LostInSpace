@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3 uid="uid://c8o43dswtf6kv"]
+
+[ext_resource type="Script" uid="uid://smctr5d13xbk" path="res://scene.gd" id="1_3253y"]
+[ext_resource type="PackedScene" uid="uid://ca71ech3gm7n0" path="res://asteroid.tscn" id="1_nxogm"]
+[ext_resource type="PackedScene" uid="uid://dbk0b4jkfq81v" path="res://test.tscn" id="2_3253y"]
+[ext_resource type="Texture2D" uid="uid://c2mechvucx1eu" path="res://SpacePanoramas/panorama1.jpg" id="4_m7jmp"]
+[ext_resource type="Texture2D" uid="uid://by6et85chebvt" path="res://SpacePanoramas/panorama4.jpg" id="4_ni31j"]
+[ext_resource type="PackedScene" uid="uid://co2xbiaeyebhe" path="res://sun.tscn" id="5_m7jmp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_y2354"]
+radius = 25.0
+
+[sub_resource type="Shader" id="Shader_u3cyc"]
+code = "
+// NOTE: Shader automatically converted from Godot Engine 4.4.1.stable's PanoramaSkyMaterial.
+
+shader_type sky;
+
+uniform sampler2D source_panorama : filter_linear, source_color, hint_default_black;
+uniform sampler2D noise_panorama : filter_linear, source_color, hint_default_black;
+uniform float exposure : hint_range(0, 128) = 1.0;
+
+void sky() {
+	vec2 new_coord = SKY_COORDS;
+	new_coord.x -= TIME * 0.001;
+	COLOR = (0.6 * texture(source_panorama, SKY_COORDS).rgb + 0.5 * texture(noise_panorama, new_coord).rgb) * exposure;
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m7jmp"]
+shader = SubResource("Shader_u3cyc")
+shader_parameter/source_panorama = ExtResource("4_m7jmp")
+shader_parameter/noise_panorama = ExtResource("4_ni31j")
+shader_parameter/exposure = 1.0
+
+[sub_resource type="Sky" id="Sky_g4gx0"]
+sky_material = SubResource("ShaderMaterial_m7jmp")
+
+[sub_resource type="Environment" id="Environment_3253y"]
+background_mode = 2
+background_energy_multiplier = 0.8
+sky = SubResource("Sky_g4gx0")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+glow_enabled = true
+glow_bloom = 0.2
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_density = 1.0
+fog_sky_affect = 0.0
+fog_depth_curve = 0.5
+adjustment_enabled = true
+adjustment_brightness = 1.05
+adjustment_contrast = 1.05
+adjustment_saturation = 2.0
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_3253y")
+
+[node name="Asteroid" parent="." instance=ExtResource("1_nxogm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0)
+
+[node name="Asteroid2" parent="." instance=ExtResource("1_nxogm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+visible = false
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 100)
+far = 80000.0
+
+[node name="Area3D" type="Area3D" parent="Camera3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/Area3D"]
+shape = SubResource("SphereShape3D_y2354")
+
+[node name="Star" parent="." instance=ExtResource("5_m7jmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3254.25, 2153.59, -7506.44)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 0.01
+autostart = true
+
+[node name="Timer2" type="Timer" parent="CanvasLayer"]
+wait_time = 0.5
+autostart = true
+
+[node name="Control" parent="CanvasLayer" instance=ExtResource("2_3253y")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3253y")
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="Asteroid" method="_move_asteroid"]
+[connection signal="timeout" from="CanvasLayer/Timer" to="Asteroid2" method="_move_asteroid"]
+[connection signal="timeout" from="CanvasLayer/Timer2" to="." method="_handle_asteroids"]

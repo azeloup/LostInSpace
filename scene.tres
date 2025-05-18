@@ -1,0 +1,22 @@
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://d3w0swr1b5ury"]
+
+[ext_resource type="Texture2D" uid="uid://dflm8tcxwmltr" path="res://SpacePanoramas/8k_stars_milky_way.jpg" id="1_7qk8s"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_q64yb"]
+panorama = ExtResource("1_7qk8s")
+
+[sub_resource type="Sky" id="Sky_g4gx0"]
+sky_material = SubResource("PanoramaSkyMaterial_q64yb")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_g4gx0")
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+fog_mode = 1
+fog_light_color = Color(0, 0, 0, 1)
+fog_sky_affect = 0.0
+fog_depth_curve = 0.5
+adjustment_enabled = true
+adjustment_saturation = 2.0

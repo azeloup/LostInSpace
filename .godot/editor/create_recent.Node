@@ -1,0 +1,14 @@
+CollisionShape3D
+Area3D
+StaticBody3D
+AnimationPlayer
+MeshInstance3D
+Node3D
+Sprite3D
+Sprite2D
+SubViewport
+Timer
+CollisionPolygon3D
+WorldEnvironment
+Camera3D
+CanvasLayer
