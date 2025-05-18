@@ -1,17 +1,17 @@
 [gd_scene load_steps=15 format=4 uid="uid://ca71ech3gm7n0"]
 
-[ext_resource type="Script" uid="uid://be620caqgl26k" path="res://asteroid.gd" id="1_uf7ls"]
-[ext_resource type="Texture2D" uid="uid://b0emrmk16l13y" path="res://Asteroid_1d_FBX/2K/Asteroid1d_Color_2K.png" id="2_8ewcs"]
-[ext_resource type="Texture2D" uid="uid://bys8irkq6mwxo" path="res://Asteroid_1d_FBX/2K/Asteroid1d_AO_2K.png" id="3_oan80"]
-[ext_resource type="Texture2D" uid="uid://vp6l5ocj32dl" path="res://Asteroid_1d_FBX/2K/Asteroid1d_Mask_2K.png" id="4_433ph"]
-[ext_resource type="Texture2D" uid="uid://b6c1u5adv7b15" path="res://Asteroid_1d_FBX/2K/Asteroid1d_AORM_2K.png" id="5_o4w5k"]
-[ext_resource type="Texture2D" uid="uid://bj3c2hiqrxego" path="res://Asteroid_1d_FBX/2K/Asteroid1d_Emission_2K.png" id="6_v1sc6"]
-[ext_resource type="Texture2D" uid="uid://boldf6moumrbr" path="res://Asteroid_1d_FBX/2K/Asteroid1d_Metalness_2K.png" id="7_sj1ob"]
-[ext_resource type="Texture2D" uid="uid://gliwmlwd1gof" path="res://Asteroid_1d_FBX/2K/Asteroid1d_NormalOpenGL_2K.png" id="8_g62c5"]
-[ext_resource type="Texture2D" uid="uid://bol76ufk6n65n" path="res://Asteroid_1d_FBX/2K/Asteroid1d_Roughness_2K.png" id="9_4nf2d"]
+[ext_resource type="Script" uid="uid://be620caqgl26k" path="res://Asteroid/asteroid.gd" id="1_7jles"]
+[ext_resource type="Texture2D" uid="uid://b0emrmk16l13y" path="res://Asteroid/AsteroidTextures/Asteroid1d_Color_2K.png" id="2_0q22n"]
+[ext_resource type="Texture2D" uid="uid://bys8irkq6mwxo" path="res://Asteroid/AsteroidTextures/Asteroid1d_AO_2K.png" id="3_pol7n"]
+[ext_resource type="Texture2D" uid="uid://vp6l5ocj32dl" path="res://Asteroid/AsteroidTextures/Asteroid1d_Mask_2K.png" id="4_mvrrp"]
+[ext_resource type="Texture2D" uid="uid://b6c1u5adv7b15" path="res://Asteroid/AsteroidTextures/Asteroid1d_AORM_2K.png" id="5_wib1t"]
+[ext_resource type="Texture2D" uid="uid://bj3c2hiqrxego" path="res://Asteroid/AsteroidTextures/Asteroid1d_Emission_2K.png" id="6_y07ru"]
+[ext_resource type="Texture2D" uid="uid://boldf6moumrbr" path="res://Asteroid/AsteroidTextures/Asteroid1d_Metalness_2K.png" id="7_01pbu"]
+[ext_resource type="Texture2D" uid="uid://gliwmlwd1gof" path="res://Asteroid/AsteroidTextures/Asteroid1d_NormalOpenGL_2K.png" id="8_s75rq"]
+[ext_resource type="Texture2D" uid="uid://bol76ufk6n65n" path="res://Asteroid/AsteroidTextures/Asteroid1d_Roughness_2K.png" id="9_pr6ny"]
 
-[sub_resource type="SphereShape3D" id="SphereShape3D_uf7ls"]
-radius = 1.0
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_uf7ls"]
+points = PackedVector3Array(0.00915476, -0.00178083, 0.00112893, -0.00914453, 0.00199149, 0.000547897, -0.00914453, 0.00199149, 0.00141859, 0.00189129, 0.00954524, -0.00322451, 0.00247165, -0.00439762, -0.00816246, -0.0039159, -0.00613911, 0.00722896, 0.00102075, 0.0048958, 0.00810139, -0.00769183, -4.11581e-05, -0.00671074, -0.00246321, -0.00904524, 0.00141859, 0.00682974, -0.00730011, 0.00287205, 0.00508686, 0.00518696, -0.00671074, -0.00565878, 0.00838242, -0.00322451, -0.00565878, 0.00518696, 0.00693931, 0.0074101, 0.00198967, 0.00577724, 0.00682974, -0.00613911, -0.00496762, -0.0068195, -0.0049763, -0.00467797, 0.000440389, 0.00460464, -0.00816246, -0.00769183, -0.0049763, 0.00432551, 0.00247165, 0.00925226, 0.00199962, 0.00392435, -0.00468696, 0.00722896, 0.00711992, 0.00547812, -0.00235382, 0.000150208, -0.00875408, -0.00264347, -0.000720334, -0.000910994, 0.00897381, 0.00566901, 0.00053752, -0.00787281, -0.00449626, 0.00838242, 0.0031617, 0.00218147, -0.00904524, 0.00345308, -0.00449626, 0.00780011, -0.00554866, 0.00857261, -0.00468696, -0.00322451, -0.00217303, 0.00053752, -0.00874524, 0.00537704, -0.00875408, -0.000321058, 0.00160111, 0.00896292, -0.00583831, -0.0039159, -0.0043958, -0.00700039)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_025yp"]
 resource_name = "Asteroid1d_Crystal"
@@ -56,30 +56,30 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_fdm8t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5aofk"]
-albedo_texture = ExtResource("2_8ewcs")
+albedo_texture = ExtResource("2_0q22n")
 metallic = 1.0
-metallic_texture = ExtResource("7_sj1ob")
-roughness_texture = ExtResource("9_4nf2d")
+metallic_texture = ExtResource("7_01pbu")
+roughness_texture = ExtResource("9_pr6ny")
 emission_enabled = true
-emission_texture = ExtResource("6_v1sc6")
+emission_texture = ExtResource("6_y07ru")
 normal_enabled = true
-normal_texture = ExtResource("8_g62c5")
+normal_texture = ExtResource("8_s75rq")
 clearcoat_enabled = true
 ao_enabled = true
-ao_texture = ExtResource("3_oan80")
+ao_texture = ExtResource("3_pol7n")
 detail_enabled = true
-detail_mask = ExtResource("4_433ph")
-detail_albedo = ExtResource("2_8ewcs")
-detail_normal = ExtResource("5_o4w5k")
+detail_mask = ExtResource("4_mvrrp")
+detail_albedo = ExtResource("2_0q22n")
+detail_normal = ExtResource("5_wib1t")
 
 [node name="Asteroid" type="StaticBody3D"]
-script = ExtResource("1_uf7ls")
+script = ExtResource("1_7jles")
 
 [node name="Collision" type="CollisionShape3D" parent="."]
-shape = SubResource("SphereShape3D_uf7ls")
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_uf7ls")
 
 [node name="Mesh" type="MeshInstance3D" parent="Collision"]
-transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
 mesh = SubResource("ArrayMesh_6roof")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_5aofk")

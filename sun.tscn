@@ -32,9 +32,9 @@ uniform vec3 uv2_offset;
 
 void vertex() {
 	UV = UV * uv1_scale.xy + uv1_offset.xy;
-	VERTEX.y += sin(TIME * 0.5 + (VERTEX.x + VERTEX.z) * 0.2) * 10.0;
-	VERTEX.x += sin(TIME * 0.5 + (VERTEX.y + VERTEX.z) * 0.2) * 10.0;
-	VERTEX.z += sin(TIME * 0.5 + (VERTEX.x + VERTEX.y) * 0.2) * 10.0;
+	VERTEX.y += sin(TIME * 0.5 + (VERTEX.x + VERTEX.z) * 0.2);
+	VERTEX.x += sin(TIME * 0.5 + (VERTEX.y + VERTEX.z) * 0.2);
+	VERTEX.z += sin(TIME * 0.5 + (VERTEX.x + VERTEX.y) * 0.2);
 }
 
 void fragment() {
@@ -79,8 +79,8 @@ shader_parameter/uv2_offset = Vector3(0, 0, 0)
 
 [sub_resource type="SphereMesh" id="SphereMesh_iveel"]
 material = SubResource("ShaderMaterial_iveel")
-radius = 1000.0
-height = 2000.0
+radius = 50.0
+height = 100.0
 
 [sub_resource type="Animation" id="Animation_gtd5v"]
 length = 0.001

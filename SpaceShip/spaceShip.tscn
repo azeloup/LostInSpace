@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://cn0pu5b4655d6"]
+
+[ext_resource type="Script" uid="uid://dk3a0pnse8rmr" path="res://SpaceShip/spaceShip.gd" id="1_sddhk"]
+[ext_resource type="ArrayMesh" uid="uid://uk3e8sqyp08h" path="res://SpaceShip/starShip.obj" id="2_5hdnx"]
+[ext_resource type="Texture2D" uid="uid://k275lxntpm85" path="res://SpaceShip/SpaceShipTexture/Material.001_Base_color.jpg" id="2_sddhk"]
+[ext_resource type="PackedScene" uid="uid://dddnrstw6lua3" path="res://menu.tscn" id="4_5hdnx"]
+[ext_resource type="Texture2D" uid="uid://c8d02hjgxas0y" path="res://SpaceShip/SpaceShipTexture/Material.001_Mixed_AO.jpg" id="4_8h2t0"]
+[ext_resource type="Texture2D" uid="uid://d1rbsc0stis83" path="res://SpaceShip/SpaceShipTexture/Material.001_Normal_DirectX.jpg" id="6_6u7lp"]
+[ext_resource type="Texture2D" uid="uid://dw1mls6wo26je" path="res://SpaceShip/SpaceShipTexture/Material.001_Emissive.jpg" id="7_htqil"]
+[ext_resource type="Texture2D" uid="uid://dop7ahmwk0a3i" path="res://SpaceShip/SpaceShipTexture/Material.001_Metallic.jpg" id="8_wrgg5"]
+[ext_resource type="Texture2D" uid="uid://bqojibeioorgd" path="res://SpaceShip/SpaceShipTexture/Material.001_Roughness.jpg" id="9_vq0oj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uwsa0"]
+albedo_texture = ExtResource("2_sddhk")
+metallic = 1.0
+metallic_texture = ExtResource("8_wrgg5")
+roughness_texture = ExtResource("9_vq0oj")
+emission_enabled = true
+emission_texture = ExtResource("7_htqil")
+normal_enabled = true
+normal_texture = ExtResource("6_6u7lp")
+ao_enabled = true
+ao_texture = ExtResource("4_8h2t0")
+detail_enabled = true
+detail_albedo = ExtResource("2_sddhk")
+detail_normal = ExtResource("6_6u7lp")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sbmmb"]
+radius = 0.260364
+height = 2.22032
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_65iq3"]
+radius = 0.331432
+height = 3.52955
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5hdnx"]
+radius = 0.260364
+height = 2.22032
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_sddhk")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, -2.26267e-08, 8.44439e-08, 0, 0.965926, 0.258819, -8.74228e-08, 0.258819, -0.965926, 0, 8, -20)
+fov = 80.0
+far = 80000.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_5hdnx")
+surface_material_override/0 = SubResource("StandardMaterial3D_uwsa0")
+
+[node name="BodyArea" type="Area3D" parent="."]
+
+[node name="BodyCollision" type="CollisionShape3D" parent="BodyArea"]
+transform = Transform3D(5, 0, 0, 0, -4.37114e-07, -8, 0, 10, -3.49691e-07, 0, 1.1608, 0.5)
+shape = SubResource("CapsuleShape3D_sbmmb")
+
+[node name="RightArea" type="Area3D" parent="."]
+
+[node name="RightWing" type="CollisionShape3D" parent="RightArea"]
+transform = Transform3D(-5.61943e-08, -3.21394, 3.83022, 2, -2.18557e-07, 0, 6.69697e-08, 3.83022, 3.21394, -7.7, -0.5, -0.2)
+shape = SubResource("CapsuleShape3D_65iq3")
+
+[node name="BodyCollision" type="CollisionShape3D" parent="RightArea"]
+transform = Transform3D(6, 0, 0, 0, -2.18557e-07, -10, 0, 5, -4.37114e-07, 4.2, 2, -4.2)
+shape = SubResource("CapsuleShape3D_5hdnx")
+
+[node name="LeftArea" type="Area3D" parent="."]
+
+[node name="LeftWing" type="CollisionShape3D" parent="LeftArea"]
+transform = Transform3D(-5.61943e-08, -3.21394, -3.83022, 2, -2.18557e-07, 0, -6.69697e-08, -3.83022, 3.21394, 7.7, -0.5, 0.2)
+shape = SubResource("CapsuleShape3D_65iq3")
+
+[node name="BodyCollision" type="CollisionShape3D" parent="LeftArea"]
+transform = Transform3D(6, 0, 0, 0, -2.18557e-07, -10, 0, 5, -4.37114e-07, -4.2, 2, -4.2)
+shape = SubResource("CapsuleShape3D_5hdnx")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Menu" parent="CanvasLayer" instance=ExtResource("4_5hdnx")]
+visible = false
+
+[node name="Panel" type="PanelContainer" parent="CanvasLayer"]
+offset_right = 72.0
+offset_bottom = 157.0
+scale = Vector2(2, 2)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ATH"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ATH"
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="CanvasLayer/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "ATH"
+horizontal_alignment = 1
+
+[connection signal="body_entered" from="BodyArea" to="." method="damage_body"]
+[connection signal="body_entered" from="RightArea" to="." method="damage_right"]
+[connection signal="body_entered" from="LeftArea" to="." method="damage_left"]
