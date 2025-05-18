@@ -6,9 +6,12 @@ extends Control
 # instead of `set("custom_styles/normal", ...)`.
 
 @onready var label = $Panel/MarginContainer/VBoxContainer/Label
+@onready var panel = $Panel
 @onready var button = $Panel/MarginContainer/VBoxContainer/Button
 @onready var button2 = $Panel/MarginContainer/VBoxContainer/Button2
 @onready var reset_all_button = $Panel/MarginContainer/VBoxContainer/ResetAllButton
+
+const scene = preload("res://scene.tscn")
 
 func _ready():
 	# Focus the first button automatically for keyboard/controller-friendly navigation.
@@ -32,6 +35,9 @@ func _on_button_pressed():
 	button.add_theme_stylebox_override("pressed", new_stylebox_pressed)
 
 	label.add_theme_color_override("font_color", Color(1, 1, 0.5))
+	
+	add_child(scene.instantiate())
+	panel.hide()
 
 
 func _on_button2_pressed():

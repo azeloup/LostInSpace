@@ -1,9 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://c8o43dswtf6kv"]
+[gd_scene load_steps=10 format=3 uid="uid://c8o43dswtf6kv"]
 
-[ext_resource type="Script" uid="uid://smctr5d13xbk" path="res://scene.gd" id="1_3253y"]
+[ext_resource type="Script" uid="uid://cgw3f4dkbhsdf" path="res://scene.gd" id="1_3253y"]
 [ext_resource type="Texture2D" uid="uid://by6et85chebvt" path="res://SpacePanoramas/panorama4.jpg" id="4_ni31j"]
 [ext_resource type="PackedScene" uid="uid://co2xbiaeyebhe" path="res://sun.tscn" id="5_m7jmp"]
-[ext_resource type="PackedScene" uid="uid://dddnrstw6lua3" path="res://menu.tscn" id="5_ni31j"]
 [ext_resource type="Texture2D" uid="uid://dlpb5g3g1nae1" path="res://SpacePanoramas/NoiseTextures/noise1.jpg" id="5_y2354"]
 [ext_resource type="PackedScene" uid="uid://cn0pu5b4655d6" path="res://SpaceShip/spaceShip.tscn" id="7_ni31j"]
 
@@ -72,8 +71,6 @@ autostart = true
 [node name="Timer2" type="Timer" parent="CanvasLayer"]
 wait_time = 0.5
 autostart = true
-
-[node name="Control" parent="CanvasLayer" instance=ExtResource("5_ni31j")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3253y")

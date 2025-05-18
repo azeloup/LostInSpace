@@ -1,14 +1,19 @@
 extends Node3D
 
+@onready var timer: Timer = $CanvasLayer/Timer
 @onready var label1: Label = $CanvasLayer/Panel/MarginContainer/VBoxContainer/Label
 @onready var label2: Label = $CanvasLayer/Panel/MarginContainer/VBoxContainer/Label2
 @onready var label3: Label = $CanvasLayer/Panel/MarginContainer/VBoxContainer/Label3
+@onready var label4: Label = $CanvasLayer/Panel/MarginContainer/VBoxContainer/Label4
 @onready var node: Node3D = $"."
 @onready var body: MeshInstance3D = $MeshInstance3D
+
 
 const SPEED = 0.5
 const MAX_HP = 100.0
 const DAMAGE = 25.0
+
+var score = 0
 
 var hp_body = MAX_HP
 var hp_left = MAX_HP
@@ -19,9 +24,10 @@ var lastYDir = 0
 var last = Vector3()
 
 func _ready():
-	label1.text = "Body hp: %d" % hp_body
-	label2.text = "Right Wing hp: %d" % hp_right
-	label3.text = "Left Wing hp: %d" % hp_left
+	label1.text = "Score: %d" % score
+	label2.text = "Body hp: %d" % hp_body
+	label3.text = "Right Wing hp: %d" % hp_right
+	label4.text = "Left Wing hp: %d" % hp_left
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("ui_left", "ui_right", "ui_down", "ui_up")
@@ -46,12 +52,16 @@ func _physics_process(delta: float) -> void:
 
 func damage_body(body: Node3D) -> void:
 	hp_body = max(hp_body - DAMAGE, 0)
-	label1.text = "Body hp: %d" % hp_body
+	label2.text = "Body hp: %d" % hp_body
 
 func damage_left(bosy: Node3D) -> void:
 	hp_left = max(hp_left - DAMAGE, 0)
-	label2.text = "Right Wing hp: %d" % hp_left
+	label3.text = "Right Wing hp: %d" % hp_left
 
 func damage_right(body: Node3D) -> void:
 	hp_right = max(hp_right - DAMAGE, 0)
-	label3.text = "Left Wing hp: %d" % hp_right
+	label4.text = "Left Wing hp: %d" % hp_right
+	
+func update_score() -> void:
+	score += 1
+	label1.text = "Score: %d" % score
