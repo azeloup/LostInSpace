@@ -1,23 +1,23 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747532063
-asteroid.gd::GDScript::2732855878055550284::1747515997::0::1::::<>StaticBody3D<><>0<>0<><>::
-asteroid.tscn::PackedScene::4840487357644712787::1747531716::0::1::::<><><>0<>0<><>::uid://be620caqgl26k::::res://asteroid.gd<>uid://b0emrmk16l13y::::res://Asteroid_1d_FBX/2K/Asteroid1d_Color_2K.png<>uid://bys8irkq6mwxo::::res://Asteroid_1d_FBX/2K/Asteroid1d_AO_2K.png<>uid://vp6l5ocj32dl::::res://Asteroid_1d_FBX/2K/Asteroid1d_Mask_2K.png<>uid://b6c1u5adv7b15::::res://Asteroid_1d_FBX/2K/Asteroid1d_AORM_2K.png<>uid://bj3c2hiqrxego::::res://Asteroid_1d_FBX/2K/Asteroid1d_Emission_2K.png<>uid://boldf6moumrbr::::res://Asteroid_1d_FBX/2K/Asteroid1d_Metalness_2K.png<>uid://gliwmlwd1gof::::res://Asteroid_1d_FBX/2K/Asteroid1d_NormalOpenGL_2K.png<>uid://bol76ufk6n65n::::res://Asteroid_1d_FBX/2K/Asteroid1d_Roughness_2K.png
+::res://::1747582307
+asteroid.gd::GDScript/GDScript::2732855878055550284::1747515997::0::1::::<>StaticBody3D<><>0<>0<><>::
+asteroid.tscn::PackedScene::4840487357644712787::1747582307::0::1::::<><><>0<>0<><>::uid://be620caqgl26k::::res://asteroid.gd<>uid://b0emrmk16l13y::::res://Asteroid_1d_FBX/2K/Asteroid1d_Color_2K.png<>uid://bys8irkq6mwxo::::res://Asteroid_1d_FBX/2K/Asteroid1d_AO_2K.png<>uid://vp6l5ocj32dl::::res://Asteroid_1d_FBX/2K/Asteroid1d_Mask_2K.png<>uid://b6c1u5adv7b15::::res://Asteroid_1d_FBX/2K/Asteroid1d_AORM_2K.png<>uid://bj3c2hiqrxego::::res://Asteroid_1d_FBX/2K/Asteroid1d_Emission_2K.png<>uid://boldf6moumrbr::::res://Asteroid_1d_FBX/2K/Asteroid1d_Metalness_2K.png<>uid://gliwmlwd1gof::::res://Asteroid_1d_FBX/2K/Asteroid1d_NormalOpenGL_2K.png<>uid://bol76ufk6n65n::::res://Asteroid_1d_FBX/2K/Asteroid1d_Roughness_2K.png
 icon.webp::CompressedTexture2D/CompressedTexture2D::3626017087650301524::1747495242::1747495254::1::::<><><>0<>0<>c6c2d2a409d3db208320ab54c2d08e4f<>res://.godot/imported/icon.webp-e94f9a68b0f625a567a797079e4d325f.ctex::
 README.md::TextFile/TextFile::-1::1747495242::0::1::::<><><>0<>0<><>::
-scene.gd::GDScript::1288328022016289256::1747528040::0::1::::<>Node3D<><>0<>0<><>::
-scene.gdshader::Shader::5578693724306799650::1747532180::0::1::::<><><>0<>0<><>::
-scene.tres::Environment::9171517235602213162::1747530699::0::1::::<><><>0<>0<><>::uid://dflm8tcxwmltr::::res://SpacePanoramas/8k_stars_milky_way.jpg
-scene.tscn::PackedScene::7119785477419404541::1747532180::0::1::::<><><>0<>0<><>::uid://smctr5d13xbk::::res://scene.gd<>uid://ca71ech3gm7n0::::res://asteroid.tscn<>uid://dbk0b4jkfq81v::::res://test.tscn<>uid://bdxym6sybbuxd::::res://SpacePanoramas/panorama2.jpg<>uid://co2xbiaeyebhe::::res://sun.tscn
+scene.gd::GDScript::1288328022016289256::1747579314::0::1::::<>Node3D<><>0<>0<><>::
+scene.gdshader::Shader::5578693724306799650::1747582307::0::1::::<><><>0<>0<><>::
+scene.tres::Environment/Environment::9171517235602213162::1747530699::0::1::::<><><>0<>0<><>::uid://dflm8tcxwmltr::::res://SpacePanoramas/8k_stars_milky_way.jpg
+scene.tscn::PackedScene::7119785477419404541::1747582307::0::1::::<><><>0<>0<><>::uid://smctr5d13xbk::::res://scene.gd<>uid://ca71ech3gm7n0::::res://asteroid.tscn<>uid://dbk0b4jkfq81v::::res://test.tscn<>uid://c2mechvucx1eu::::res://SpacePanoramas/panorama1.jpg<>uid://by6et85chebvt::::res://SpacePanoramas/panorama4.jpg<>uid://co2xbiaeyebhe::::res://sun.tscn
 sub_viewport.gd::GDScript/GDScript::5209502438696810493::1747527882::0::1::::<>Node3D<><>0<>0<><>::
-sun.tscn::PackedScene::5812622074706576534::1747531716::0::1::::<><><>0<>0<><>::uid://b1etbqxotg3xs::::res://SpacePanoramas/8k_sun.jpg
+sun.tscn::PackedScene::5812622074706576534::1747582307::0::1::::<><><>0<>0<><>::uid://b1etbqxotg3xs::::res://SpacePanoramas/8k_sun.jpg
 test.gd::GDScript/GDScript::3283115984440424244::1747495242::0::1::::<>Control<><>0<>0<><>::
-test.tscn::PackedScene::7251615920413097565::1747531716::0::1::::<><><>0<>0<><>::uid://bm1mo8lejiyca::::res://test.gd
-::res://Asteroid_1d_FBX/::1747497998
+test.tscn::PackedScene::7251615920413097565::1747582307::0::1::::<><><>0<>0<><>::uid://bm1mo8lejiyca::::res://test.gd
+::res://Asteroid_1d_FBX/::1747579795
 Asteroid1d _1.png::CompressedTexture2D/CompressedTexture2D::8971286105702043476::1747497995::1747497996::1::::<><><>0<>0<>b9cfdd7e55c722b82bd048bd69708c0f<>res://.godot/imported/Asteroid1d _1.png-daabcfb0c4cae4c88bc89f4453fdd095.ctex::
 Asteroid_1d.fbx::PackedScene/PackedScene::1858321840408899609::1747497995::1747497997::1::::<><><>0<>0<>e4abf0d94a7edbd812fb4697923c8154<>res://.godot/imported/Asteroid_1d.fbx-e80bbad9eac89b71471361471650e6bc.scn::
 Asteroid_1d_LOD.fbx::PackedScene/PackedScene::1792901706987191880::1747497995::1747497998::1::::<><><>0<>0<>74035128d26f1d7a16cd9e4c5deadf76<>res://.godot/imported/Asteroid_1d_LOD.fbx-1adc1d94fbb06c6df072a1719f4df3f7.scn::
 read me.txt::TextFile/TextFile::-1::1747497995::0::1::::<><><>0<>0<><>::
-::res://Asteroid_1d_FBX/2K/::1747498865
+::res://Asteroid_1d_FBX/2K/::1747579795
 Asteroid1d_AORM_2K.png::CompressedTexture2D/CompressedTexture2D::4568019525536383942::1747497995::1747498125::1::::<><><>0<>0<>622dccf4b0183ae3e9c95d4052eb3cd7<>res://.godot/imported/Asteroid1d_AORM_2K.png-fd9f9ed27fbf6bc8d5afb2c00f72f18c.s3tc.ctex::
 Asteroid1d_AO_2K.png::CompressedTexture2D/CompressedTexture2D::4110130586805374404::1747497995::1747498238::1::::<><><>0<>0<>6506317e84e86fd5f4716cbdddae20fe<>res://.godot/imported/Asteroid1d_AO_2K.png-e38b67bdacd735fc6d0342c33479e8c8.s3tc.ctex::
 Asteroid1d_Color_2K.png::CompressedTexture2D/CompressedTexture2D::4150158895021187264::1747497995::1747498266::1::::<><><>0<>0<>17c0e474d29690a77442cf2a39945375<>res://.godot/imported/Asteroid1d_Color_2K.png-397534a9048dda67e030341fab88f1b4.s3tc.ctex::
@@ -28,7 +28,7 @@ Asteroid1d_Metalness_2K.png::CompressedTexture2D/CompressedTexture2D::3391965377
 Asteroid1d_NormalDirctX_2K.png::CompressedTexture2D/CompressedTexture2D::3845294193287531460::1747497995::1747498459::1::::<><><>0<>0<>fc3f5892455ea6019cc410490a6ed18c<>res://.godot/imported/Asteroid1d_NormalDirctX_2K.png-11615b5fb81c699a8ad4fef626c7b70e.s3tc.ctex::
 Asteroid1d_NormalOpenGL_2K.png::CompressedTexture2D/CompressedTexture2D::444366888808559225::1747497995::1747498449::1::::<><><>0<>0<>8b81b5757fbe66be8923326da8cb0300<>res://.godot/imported/Asteroid1d_NormalOpenGL_2K.png-ba905491fafab103a0949a93e332fbd3.s3tc.ctex::
 Asteroid1d_Roughness_2K.png::CompressedTexture2D/CompressedTexture2D::3393772011987144029::1747497995::1747498230::1::::<><><>0<>0<>4d779cdffd371dd6d8a1ac3c54abb1c6<>res://.godot/imported/Asteroid1d_Roughness_2K.png-253a6f2ca8ac6cd494fd16349ecdd580.s3tc.ctex::
-::res://SpacePanoramas/::1747531071
+::res://SpacePanoramas/::1747579795
 2k_stars_milky_way.jpg::CompressedTexture2D/CompressedTexture2D::7397995446301653322::1747529522::1747529535::1::::<><><>0<>0<>f5c09bbd81a358aaeacf616fe6f6f359<>res://.godot/imported/2k_stars_milky_way.jpg-22aa23e1dd0f8fbf6e7002ef81ced0bd.s3tc.ctex::
 2k_sun.jpg::CompressedTexture2D/CompressedTexture2D::8000226013926255522::1747529669::1747529669::1::::<><><>0<>0<>fa293532ff2a99540e6a38d1286bcaab<>res://.godot/imported/2k_sun.jpg-b8947ae845bc760dd330c9c275ecaf90.ctex::
 8k_stars_milky_way.jpg::CompressedTexture2D/CompressedTexture2D::7533702961784342499::1747529603::1747529615::1::::<><><>0<>0<>8bc2fa726ccde6b4b39de8778a2a3408<>res://.godot/imported/8k_stars_milky_way.jpg-a960314fd1ad76122f41b7b5b3bd2669.s3tc.ctex::
@@ -39,7 +39,7 @@ panorama3.jpg::CompressedTexture2D/CompressedTexture2D::9134241988398935746::174
 panorama4.jpg::CompressedTexture2D/CompressedTexture2D::4135227219152061745::1747528562::1747528705::1::::<><><>0<>0<>b952427e5b30deab5774052bf6403e31<>res://.godot/imported/panorama4.jpg-b30b84c686aa52237252d20320db9858.s3tc.ctex::
 panorama5.jpg::CompressedTexture2D/CompressedTexture2D::9160452573011733237::1747528562::1747528876::1::::<><><>0<>0<>948653491350960bfde454b4306f4fdc<>res://.godot/imported/panorama5.jpg-a4f49cc056d08ef9cf830f9697438573.s3tc.ctex::
 panorama6.jpg::CompressedTexture2D/CompressedTexture2D::5885483469815229102::1747528562::1747532195::1::::<><><>0<>0<>25652e8efef5bbefd4bc150242e28194<>res://.godot/imported/panorama6.jpg-c27eef2f7b73e49abcceac3b1ac26c62.s3tc.ctex::
-::res://SpacePanoramas/NoiseTextures/::1747528567
-noise1.jpg::CompressedTexture2D/CompressedTexture2D::7962419646920962282::1747528562::1747528567::1::::<><><>0<>0<>e6e90d6a6eceba91d6f0794e372af952<>res://.godot/imported/noise1.jpg-73aff52fcb903b79f1f600731d7464f3.ctex::
+::res://SpacePanoramas/NoiseTextures/::1747579795
+noise1.jpg::CompressedTexture2D/CompressedTexture2D::7962419646920962282::1747528562::1747582385::1::::<><><>0<>0<>7e5d3b1bee2b8918eb56ddb0c4dba302<>res://.godot/imported/noise1.jpg-73aff52fcb903b79f1f600731d7464f3.s3tc.ctex::
 noise2.jpg::CompressedTexture2D/CompressedTexture2D::5099708886468704296::1747528562::1747528567::1::::<><><>0<>0<>d8711238d60bf121f97f683965198fc0<>res://.godot/imported/noise2.jpg-fc593ec825da13bf8eb7d1f45b72a610.ctex::
 noise3.jpg::CompressedTexture2D/CompressedTexture2D::4783376736953682353::1747528562::1747528567::1::::<><><>0<>0<>d4ad0dfc23a2365e37fdc3282d7ccf11<>res://.godot/imported/noise3.jpg-93945594135cf64d493a8542dffd37c3.ctex::

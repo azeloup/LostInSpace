@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://smctr5d13xbk" path="res://scene.gd" id="1_3253y"]
 [ext_resource type="PackedScene" uid="uid://ca71ech3gm7n0" path="res://asteroid.tscn" id="1_nxogm"]
 [ext_resource type="PackedScene" uid="uid://dbk0b4jkfq81v" path="res://test.tscn" id="2_3253y"]
-[ext_resource type="Texture2D" uid="uid://c2mechvucx1eu" path="res://SpacePanoramas/panorama1.jpg" id="4_m7jmp"]
 [ext_resource type="Texture2D" uid="uid://by6et85chebvt" path="res://SpacePanoramas/panorama4.jpg" id="4_ni31j"]
 [ext_resource type="PackedScene" uid="uid://co2xbiaeyebhe" path="res://sun.tscn" id="5_m7jmp"]
+[ext_resource type="Texture2D" uid="uid://dlpb5g3g1nae1" path="res://SpacePanoramas/NoiseTextures/noise1.jpg" id="5_y2354"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_y2354"]
 radius = 25.0
@@ -29,8 +29,8 @@ void sky() {
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_m7jmp"]
 shader = SubResource("Shader_u3cyc")
-shader_parameter/source_panorama = ExtResource("4_m7jmp")
-shader_parameter/noise_panorama = ExtResource("4_ni31j")
+shader_parameter/source_panorama = ExtResource("4_ni31j")
+shader_parameter/noise_panorama = ExtResource("5_y2354")
 shader_parameter/exposure = 1.0
 
 [sub_resource type="Sky" id="Sky_g4gx0"]
