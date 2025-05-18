@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1rbsc0stis83"
-path="res://.godot/imported/Material.001_Normal_DirectX.jpg-a7c22845c78d173a779b7c85fb76839a.ctex"
+uid="uid://bqojibeioorgd"
+path="res://.godot/imported/Material.001_Roughness.jpg-755dad658d886afc1443b628349bf2d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spaceShipTexture/Material.001_Normal_DirectX.jpg"
-dest_files=["res://.godot/imported/Material.001_Normal_DirectX.jpg-a7c22845c78d173a779b7c85fb76839a.ctex"]
+source_file="res://Material.001_Roughness.jpg"
+dest_files=["res://.godot/imported/Material.001_Roughness.jpg-755dad658d886afc1443b628349bf2d6.ctex"]
 
 [params]
 

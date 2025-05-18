@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1rbsc0stis83"
-path="res://.godot/imported/Material.001_Normal_DirectX.jpg-a7c22845c78d173a779b7c85fb76839a.ctex"
+uid="uid://c2sjv2a2h2ixn"
+path="res://.godot/imported/Material.001_Emissive.jpg-d69f8c13797233b4ea006d71c1bf54ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spaceShipTexture/Material.001_Normal_DirectX.jpg"
-dest_files=["res://.godot/imported/Material.001_Normal_DirectX.jpg-a7c22845c78d173a779b7c85fb76839a.ctex"]
+source_file="res://uploads_files_4254779_Texture/Black and Blue/Material.001_Emissive.jpg"
+dest_files=["res://.godot/imported/Material.001_Emissive.jpg-d69f8c13797233b4ea006d71c1bf54ba.ctex"]
 
 [params]
 

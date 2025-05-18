@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://cn0pu5b4655d6"]
 
-[ext_resource type="Script" uid="uid://ci50oxoir3j5r" path="res://spaceShip.gd" id="1_sddhk"]
+[ext_resource type="Script" uid="uid://dk3a0pnse8rmr" path="res://spaceShip.gd" id="1_sddhk"]
 [ext_resource type="ArrayMesh" uid="uid://3v5j3jn1qyuc" path="res://uploads_files_4254779_StarShip2.obj" id="1_sk1rx"]
 [ext_resource type="Texture2D" uid="uid://k275lxntpm85" path="res://uploads_files_4254779_Texture/Material.001_Base_color.jpg" id="2_sddhk"]
 

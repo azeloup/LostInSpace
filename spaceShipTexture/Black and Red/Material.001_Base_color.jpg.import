@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhy3cprnkc6ee"
-path.s3tc="res://.godot/imported/Material.001_Base_color.jpg-d84863aa01cc34c3893b01013b5680ef.s3tc.ctex"
+path.s3tc="res://.godot/imported/Material.001_Base_color.jpg-6fd1fa8322bde3ba5c98281d7197121b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://uploads_files_4254779_Texture/Black and Red/Material.001_Base_color.jpg"
-dest_files=["res://.godot/imported/Material.001_Base_color.jpg-d84863aa01cc34c3893b01013b5680ef.s3tc.ctex"]
+source_file="res://spaceShipTexture/Black and Red/Material.001_Base_color.jpg"
+dest_files=["res://.godot/imported/Material.001_Base_color.jpg-6fd1fa8322bde3ba5c98281d7197121b.s3tc.ctex"]
 
 [params]
 

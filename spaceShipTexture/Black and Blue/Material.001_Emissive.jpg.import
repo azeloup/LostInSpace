@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c2sjv2a2h2ixn"
-path="res://.godot/imported/Material.001_Emissive.jpg-d69f8c13797233b4ea006d71c1bf54ba.ctex"
+path="res://.godot/imported/Material.001_Emissive.jpg-eec02968c0a7ea0a1ca0e3a5cc2a1933.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://uploads_files_4254779_Texture/Black and Blue/Material.001_Emissive.jpg"
-dest_files=["res://.godot/imported/Material.001_Emissive.jpg-d69f8c13797233b4ea006d71c1bf54ba.ctex"]
+source_file="res://spaceShipTexture/Black and Blue/Material.001_Emissive.jpg"
+dest_files=["res://.godot/imported/Material.001_Emissive.jpg-eec02968c0a7ea0a1ca0e3a5cc2a1933.ctex"]
 
 [params]
 
