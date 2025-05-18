@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://cn0pu5b4655d6"]
+
+[ext_resource type="Script" uid="uid://ci50oxoir3j5r" path="res://spaceShip.gd" id="1_sddhk"]
+[ext_resource type="ArrayMesh" uid="uid://3v5j3jn1qyuc" path="res://uploads_files_4254779_StarShip2.obj" id="1_sk1rx"]
+[ext_resource type="Texture2D" uid="uid://k275lxntpm85" path="res://uploads_files_4254779_Texture/Material.001_Base_color.jpg" id="2_sddhk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_sk1rx"]
+
+[sub_resource type="Sky" id="Sky_sddhk"]
+sky_material = SubResource("ProceduralSkyMaterial_sk1rx")
+
+[sub_resource type="Environment" id="Environment_sk1rx"]
+background_mode = 2
+sky = SubResource("Sky_sddhk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5hdnx"]
+albedo_texture = ExtResource("2_sddhk")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sbmmb"]
+radius = 0.260364
+height = 2.46784
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_65iq3"]
+radius = 0.331432
+height = 3.52955
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_sddhk")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_sk1rx")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.999614, -4.65481e-10, 0.0277995, 0.00632442, 0.973778, 0.227413, -0.0270706, 0.227501, -0.973401, 0.185758, 6.53846, -2.5551)
+fov = 82.3299
+
+[node name="3Dmodel" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_sk1rx")
+surface_material_override/0 = SubResource("StandardMaterial3D_5hdnx")
+
+[node name="BodyArea" type="Area3D" parent="."]
+
+[node name="BodyCollisionShape" type="CollisionShape3D" parent="BodyArea"]
+transform = Transform3D(9.99995, 0.0310602, 0.000643024, -4.33681e-18, 0.206981, -9.99786, -0.0310668, 9.99781, 0.20698, 0, 0.127004, -1.05478)
+shape = SubResource("CapsuleShape3D_sbmmb")
+
+[node name="RightArea" type="Area3D" parent="."]
+
+[node name="RightWing" type="CollisionShape3D" parent="RightArea"]
+transform = Transform3D(0.163911, -3.19983, 3.83851, 4.98141, -0.20155, -0.380728, 0.398384, 3.83672, 3.18133, -7.71323, 0.15533, -0.195997)
+shape = SubResource("CapsuleShape3D_65iq3")
+
+[node name="LeftArea" type="Area3D" parent="."]
+
+[node name="LeftWing" type="CollisionShape3D" parent="LeftArea"]
+transform = Transform3D(-0.0657549, 3.40597, -3.65992, -4.99907, -0.0965108, 0, -0.0706444, 3.65924, 3.40661, 7.29426, 1.01982, 0.569629)
+shape = SubResource("CapsuleShape3D_65iq3")
