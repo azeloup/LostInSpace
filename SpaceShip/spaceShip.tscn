@@ -126,7 +126,7 @@ autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_uwsa0")
-volume_db = 0.5
+volume_db = -50.0
 
 [connection signal="body_entered" from="BodyArea" to="." method="damage_body"]
 [connection signal="body_entered" from="RightArea" to="." method="damage_right"]

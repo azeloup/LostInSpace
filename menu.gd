@@ -1,7 +1,6 @@
 extends Control
 
 @onready var label = $Panel/MarginContainer/VBoxContainer/Label
-@onready var panel = $Panel
 @onready var button = $Panel/MarginContainer/VBoxContainer/Button
 @onready var button2 = $Panel/MarginContainer/VBoxContainer/Button2
 @onready var score = $Panel2/MarginContainer/VBoxContainer/Label
@@ -28,7 +27,7 @@ func _on_button_pressed():
 	button.release_focus()
 	game = scene.instantiate()
 	add_child(game)
-	panel.hide()
+	hide()
 
 
 func _on_button2_pressed():
@@ -47,7 +46,7 @@ func _on_button2_pressed():
 
 func end_game(x: int) -> void:
 	score.text = "You lost!\nScore: %d" % x
-	panel.show()
+	show()
 	panel_2.show()
 	remove_child(game)
 	game.queue_free()
